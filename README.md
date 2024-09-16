@@ -118,13 +118,13 @@ Saves the results to Neo4j and Minio.
 Update Neo4j with Strong Correlations:
 Identifies strongly correlated stocks.
 Updates Neo4j with new relationship types.
-Project Structure
+# Project Structure
 stock_correlation_analysis.py: Main script containing all code.
 requirements.txt: List of required Python packages.
 Configuration Files:
 Spark and Neo4j configuration settings are embedded within the script.
  Functions and Components
-Data Acquisition
+# Data Acquisition
 yfinance:
 Fetches historical stock data starting from a specified date.
 Handles multiple tickers simultaneously.
@@ -132,7 +132,7 @@ Data Storage
 Minio Client:
 Provides an S3-compatible object storage solution.
 Stores the processed CSV data files.
-Data Processing
+# Data Processing
 Spark DataFrame Operations:
 
 Efficiently handles large datasets.
@@ -149,7 +149,7 @@ Performance Optimizations
 Batch Operations:
 Nodes and relationships are created in batches to improve performance.
 Reduces the overhead of multiple database transactions.
-Results and Visualization
+### Results and Visualization
 Correlation Analysis:
 
 Identifies pairs of stocks with significant positive or negative correlations.
