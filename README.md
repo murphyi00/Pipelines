@@ -9,7 +9,7 @@ Store the data in a Minio object storage bucket.
 Process and analyze the data using PySpark to compute correlation matrices.
 Save and visualize relationships in a Neo4j graph database.
 Perform additional analysis by identifying strongly correlated stocks and updating the Neo4j database accordingly.
-Technologies and Libraries Used
+# Technologies and Libraries Used
 Python
 PySpark: Distributed data processing.
 Minio: Object storage compatible with Amazon S3.
@@ -22,7 +22,7 @@ Data Acquisition:
 
 Fetch stock data for a list of tickers using yfinance.
 Tickers include major companies and ETFs like AAPL, AMZN, MSFT, SPY, QQQ, etc.
-Data Storage:
+# Data Storage:
 
 Initialize a Minio client and create a bucket if it doesn't exist.
 Save the stock data as CSV files in the Minio bucket.
@@ -36,12 +36,12 @@ Correlation Analysis:
 Extract and filter correlations based on a specified threshold (e.g., 0.5).
 Save the filtered correlations to the Neo4j graph database.
 Identify strongly correlated stocks (e.g., correlation > 0.8) and update Neo4j.
-Visualization and Further Analysis:
+# Visualization and Further Analysis:
 
 Use Cypher queries to read data from Neo4j.
 Analyze and visualize the relationships between stocks.
 Save results back to Minio if necessary.
-Prerequisites
+# Prerequisites
 Python 3.x
 PySpark
 Minio Server
@@ -55,15 +55,11 @@ Spark Neo4j Connector:
 neo4j-connector-apache-spark_2.12-4.1.0_for_spark_3.jar
 Installation and Setup
 1. Clone the Repository
-bash
-Copy code
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/murphyi00/pipelines.git
+cd pipelines
 2. Install Required Python Libraries
 Install the necessary Python packages using pip:
 
-bash
-Copy code
 pip install yfinance minio py2neo neo4j
 3. Set Up Minio
 Install Minio Server if not already installed.
@@ -93,8 +89,6 @@ Ensure Spark is installed and properly configured.
 
 Copy the Neo4j Connector JAR to Spark's JAR directory:
 
-bash
-Copy code
 sudo cp /path/to/neo4j-connector-apache-spark_2.12-4.1.0_for_spark_3.jar /usr/local/spark/jars/
 Update Spark Configuration in your script or spark-defaults.conf if necessary.
 
@@ -103,8 +97,6 @@ Execute the Script
 
 Run the Python script:
 
-bash
-Copy code
 python stock_correlation_analysis.py
 Script Breakdown
 
